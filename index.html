@@ -31,7 +31,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 40px 30px;
+      padding: 60px 70px;
       background-color: #fff;
     }
 
@@ -41,28 +41,38 @@
       background-position: center;
     }
 
-    /* Stack layout on small screens */
+    .wrappic1 img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    /* Stack layout on small screens and hide the image section */
     @media (max-width: 768px) {
       .overlay1 {
         flex-direction: column;
       }
+
       .respon1 {
-        padding: 30px 20px;
+        padding: 40px 20px;
         text-align: center;
       }
-      .wrappic1 img {
-        max-width: 150px;
-        height: auto;
+
+      .respon2 {
+        display: none; /* Hide slideshow on mobile */
       }
+
       .l1-txt1 {
         font-size: 28px;
       }
+
       .m2-txt1 {
         font-size: 16px;
       }
+
       .flex-w {
         justify-content: center !important;
       }
+
       .size3 {
         width: 44px;
         height: 44px;
@@ -70,13 +80,7 @@
       }
     }
 
-    /* Reduce background slider height on mobile */
-    .simpleslide100-item {
-      height: 100%;
-      min-height: 300px;
-    }
-
-    /* Optional smoother fade */
+    /* Optional smoother fade for desktop slideshow */
     .simpleslide100-item {
       transition: opacity 1.2s ease-in-out;
     }
@@ -112,7 +116,7 @@
       </div>
     </div>
 
-    <!-- Right Side: Background Slider -->
+    <!-- Right Side: Background Slider (hidden on mobile) -->
     <div class="wsize1 simpleslide100-parent respon2">
       <div class="simpleslide100">
         <div class="simpleslide100-item bg-img1" style="background-image: url('images/bg01.jpg');"></div>
